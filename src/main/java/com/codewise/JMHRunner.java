@@ -1,6 +1,7 @@
 package com.codewise;
 
 import com.codewise.benchmark.AtomicOperationBenchmark;
+import com.codewise.benchmark.MapPutBenchmark;
 import com.codewise.benchmark.UUIDBenchmark;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
@@ -11,7 +12,7 @@ public class JMHRunner {
 	public static void main(String[] args) throws RunnerException {
 		new Runner(
 				new OptionsBuilder()
-						.include(".*" + UUIDBenchmark.class.getSimpleName() + ".*")
+						.include(".*" + MapPutBenchmark.class.getSimpleName() + ".*")
 						.build()
 		)
 				.run();
